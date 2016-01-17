@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {IntroCard} from 'components/IntroCard';
-
 ReactDOM.render(
-  <div className="slds">
-    <IntroCard />
+  <div>
+  hello
   </div>,
-  document.getElementById("exampleDiv")
+  document.getElementById("app")
 );

@@ -1,8 +1,13 @@
-# minimal-slds-react-es6-webpack-hot
+# Donielle Berg Portfolio Site
 
-Minimal project boilerplate code containing:
-* ReactJS
-* Babel for ECMAScript-2015
-* Salesforce Lightning Design System (production)
-* design-system-react
-* Webpack and hot-loader
+## What is this?
+
+Every developer needs a website. Here's mine: www.donielleberg.com
+
+
+## Development
+```
+npm install
+npm start
+```
+

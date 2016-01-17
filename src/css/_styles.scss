@@ -1,0 +1,245 @@
+/* ==========================================================================
+   Site styles
+   ========================================================================== */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  height: 100%;
+}
+img { max-width: 100%; }
+
+/*  TYPOGRAPHY  ============================================================================= */
+.caps { text-transform: uppercase; }
+.italic { font-style:italic; }
+
+.fw-light { font-weight: 200; }
+.fw-norm { font-weight: 400; }
+.fw-bold { font-weight: 800; }
+
+.tac { text-align: center; }
+.tal { text-align: left; }
+.tar { text-align: right; }
+
+.text-plain { text-decoration: none; }
+.list-plain { padding: 0; margin: 0; list-style-type: none; }
+.list-horz li { display: inline-block; }
+
+/*  LAYOUT & DISPLAY  ============================================================================= */
+.dn { display: none; }
+.db { display: block; }
+.dib { display: inline-block; }
+.dt { display: table; }
+.dtc { display: table-cell; }
+
+.pos-rel { position: relative; }
+.pos-abs { position: absolute; }
+.pos-fix { position: fixed; }
+.top-0 { top: 0; }
+.bot-0 { bottom: 0; }
+.left-0 { left: 0; }
+.right-0 { right: 0; }
+
+.fl { float: left; }
+.fr { float: right; }
+
+.center { margin-left: auto; margin-right: auto; }
+.a-top { vertical-align: top; }
+.a-mid { vertical-align: middle; }
+.a-bot { vertical-align: bottom; }
+.wi-full { width: 100%; }
+.ht-full { height: 100%; }
+.htMin-full { min-height: 100%; }
+
+.z-above { z-index: 10; }
+.z-top { z-index: 999; }
+
+/* Custom Display */
+.mw-800 { max-width: 800px; }
+.mw-projects { max-width: 800px; }
+
+/* SHAPES & FORM DEFAULTS  ============================================================================= */
+.circle { border-radius: 100%; }
+button,
+input[type="submit"] { border: none; background-color: transparent; }
+
+input,
+textarea { border: none; }
+
+input:focus,
+textarea:focus,
+button { outline: none; }
+
+a { transition:all .4s ease; color: inherit; text-decoration:none; border-bottom: 2px solid $color-anchor; }
+a:hover { color: $color-anchor; text-decoration:none; border-bottom: 2px solid $color-anchor; }
+
+/* BORDER WIDTHS & STYLE ============================================================================= */
+.ban { border: none !important; }
+.bas { border-width: 1px; border-style: solid; }
+.bls { border-left-width: 1px; border-left-style: solid; }
+.brs { border-right-width: 1px; border-right-style: solid; }
+.bts { border-top-width: 1px; border-top-style: solid; }
+.bbs { border-bottom-width: 1px; border-bottom-style: solid; }
+.border-gray { border-color: $color-slate; }
+
+
+/* TEXT/BACKGROUND/BORDER COLORS ============================================================================= */
+.background-peach {
+  background-color: $color-bg-primary;
+  background-image: -webkit-linear-gradient(left, $color-salmon, $color-peach);
+}
+.text-peach {
+  color: $color-peach;
+  background-image: -webkit-linear-gradient(left, $color-peach, $color-salmon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.background-bloodyMary {
+  background-color: $color-bg-primary;
+  background-image: -webkit-linear-gradient(left, $color-redOrange, $color-hotPink);
+}
+.text-bloodyMary {
+  color: $color-redOrange;
+  background-image: -webkit-linear-gradient(left, $color-redOrange, $color-hotPink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.background-siriusTamed {
+  background-color: $color-bg-primary;
+  background-image: -webkit-linear-gradient(left, $color-softMint, $color-ltGray);
+}
+.background-ash {
+  background-color: $color-bg-primary;
+  background-image: -webkit-linear-gradient(left, $color-slate, $color-drkSlate);
+}
+
+
+/*  GRID OF TWELVE   ============================================================================= */
+/* Mobile First */
+.span_12_of_12 { width: 100%; }
+.span_11_of_12 { width: 100%; }
+.span_10_of_12 { width: 100%; }
+.span_9_of_12  { width: 100%; }
+.span_8_of_12  { width: 100%; }
+.span_7_of_12  { width: 100%; }
+.span_6_of_12  { width: 100%; }
+.span_5_of_12  { width: 100%; }
+.span_4_of_12  { width: 100%; }
+.span_3_of_12  { width: 100%; }
+.span_2_of_12  { width: 100%; }
+.span_1_of_12  { width: 100%; }
+
+
+/*  12 Column grid for bigger THAN 30em - 480 PIXELS wide */
+@include break(medium) {
+.span_12_of_12 { width: 100%; }
+.span_11_of_12 { width: 100%; }
+.span_10_of_12 { width: 100%; }
+.span_9_of_12  { width: 100%; }
+.span_8_of_12  { width: 100%; }
+.span_7_of_12  { width: 100%; }
+.span_6_of_12  { width: 100%; }
+.span_5_of_12  { width: 100%; }
+.span_4_of_12  { width: 100%; }
+.span_3_of_12  { width: 100%; }
+.span_2_of_12  { width: 100%; }
+.span_1_of_12  { width: 100%; }
+
+}
+@include break(large){
+.span_12_of_12 { width: 100%;   }
+.span_11_of_12 { width: 91.46%; }
+.span_10_of_12 { width: 83%;    }
+.span_9_of_12  { width: 74.54%; }
+.span_8_of_12  { width: 66.08%; }
+.span_7_of_12  { width: 57.62%; }
+.span_6_of_12  { width: 50%; }
+.span_5_of_12  { width: 40.7%;  }
+.span_4_of_12  { width: 32.24%; }
+.span_3_of_12  { width: 23.78%; }
+.span_2_of_12  { width: 15.32%; }
+.span_1_of_12  { width: 6.86%;  }
+
+.mw-projects { max-width: 1000px; }
+}
+
+/* ==========================================================================
+   Code from Smart People
+   ========================================================================== */
+/* Paul Irish Box Sizing ==========================================================================
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Flag Object from CSS Wizardry ==========================================================================
+ * http://csswizardry.com/2013/05/the-flag-object/
+ */
+.flag {
+    display: table;
+    width: 100%;
+}
+
+.flag__image,
+.flag__body {
+    display: table-cell;
+    vertical-align: middle;
+
+    .flag--top & {
+        vertical-align: top;
+    }
+
+    .flag--bottom & {
+        vertical-align: bottom;
+    }
+
+}
+
+.flag__image {
+    padding-right: 10px;
+
+    > img {
+        display: block;
+        max-width: none;
+    }
+
+    .flag--rev & {
+        padding-right: 0;
+        padding-left: 10px;
+    }
+
+}
+
+.flag__body {
+    width: 100%;
+}
+
+/* Micro Clearfix from Nicholas Gallagher ==========================================================================
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
