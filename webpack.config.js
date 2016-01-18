@@ -16,7 +16,6 @@ module.exports = {
     loaders: [
       // JS & JSX Files
       {
-        // pre-process every *.js file (except for ones in node_modules/) with Babel:
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: [
@@ -24,6 +23,15 @@ module.exports = {
           'babel-loader?cacheDirectory&presets[]=react&presets[]=es2015', // invokes Babel to translate React and ES6
         ]
       },
+      {
+        test: /\.jsx$/,
+        loaders: [
+          'react-hot-loader', // auto-refreshes browser
+          'babel-loader?cacheDirectory&presets[]=react&presets[]=es2015', // invokes Babel to translate React and ES6
+        ]
+      },
+
+
       // SASS Files
       {
         test: /\.scss$/,

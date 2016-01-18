@@ -1,0 +1,105 @@
+import React from 'react';
+import Project from './Project.jsx';
+
+const projects = [
+  { id: "colorsafe", name: "Accessible Text Colors", link: "http://colorsafe.co/", image: "accessible-color-palette.png", tagline: "Explore accessible colors for your project.", skills: "{ HTML, CSS/SASS, Javascript, AngularJS }", description: "Web accessibility standards allow people with disabilities to use your site. This tool allows you to choose a color palette for your website that is accessible to everyone." },
+  { id: "promises", name: "Promises to Users", link: "http://donnieberg.github.io/promises/", image: "promises.png", tagline: "Make the internet better", skills: "{ HTML, CSS/SASS }", description: "During my apprenticeship at Salesforce, I had a mentor and learned how to design applications that solve problems and help users accomplish something. Several websites miss basic UX prinipals, so we came up with promises to make the internet better for users." },
+  { id: "kipp", name: "KIPP Character Report Card", link: "http://character-labs.herokuapp.com/", image: "character-labs.png", tagline: "Online Report Card System", skills: "{ HTML, CSS/SASS, Javascript, AngularJS, Ruby, Ruby on Rails }", description: "For my final project, I built a Character Strength Report Card prototype for KIPP that allows students and teachers to complete their assessments and see real time data analysis of their composite scores across semesters.", notes: "Demo Login, jackie@gmail.com, foobar" }
+];
+
+const displayName = "Homepage";
+const propTypes = {};
+const defaultProps = {};
+
+class Homepage extends React.Component {
+
+constructor(props) {
+  super(props);
+  this.state = {};
+}
+
+renderProjects() {
+  const items =  projects.map( project => {
+    return <Project
+            description={project.description}
+            image={project.image}
+            key={project.id}
+            link={project.link}
+            name={project.name}
+            skills={project.skills}
+            tagline={project.tagline}
+            />
+  });
+
+  return <ul className="list-plain">{items}</ul>;
+}
+
+render(){
+  return (
+    <section className="pam mw-800 center">
+      <section className="pvl">
+        <h1 className="mbn tac">
+        Hi, I'm Donielle.
+        </h1>
+        <h2 className="f3 tac">
+        Prior to becoming a developer, I once told an interviewer I liked coding, but she thought I said Codeine.
+          <br />
+        I didn't get the job.
+        </h2>
+        <p>
+        Fortunately, now that I code for a living, people aren't confused by that anymore. I'm currently a senior ux engineer on the User Experience Team at Salesforce. I figured out how to get out of most of the overhead meetings that are inherent to big companies so I spend 85% of my day in the terminal. I couldn't be happier.
+        </p>
+      </section>
+
+      <section className="pvl">
+        <h1 className="tac">Projects</h1>
+        {this.renderProjects()}
+      </section>
+
+      <section className="pvl">
+        <h1 className="tac">About Me</h1>
+        <h3>Who I am</h3>
+        <p>
+        I started working as a developer in 2013. Prior to that, I was an Event Planner at the KIPP Foundation, a non-profit in Education Reform. I discovered I loved programming in a fortuitous way. At KIPP, I needed to send a series of email blasts, and our sole web developer told me he'd teach me some basic html/css so I could do it myself. From there, I started teaching myself front-end code, pestered friends to make their websites, and in the summer of 2013, went through a full-time three-month web development bootcamp.
+        </p>
+        <p>
+        I'm originally from Wisconsin, love to hike, read, explore the Bay Area and beyond, and every summer I crave Spotted Cow and deep-fried cheese curds.
+        I care about social justice issues and web accessibility. I mentor a coding course with The Last Mile at San Quentin State Prison and am interested in doing pro bono work for non-profits.
+        </p>
+        <h3>What I know</h3>
+        <p>
+        I primarily work in front-end languages and frameworks, and my current favorite JS framework is ReactJS. Below are the web technologies I know, and I'm always learning something new.
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS, SASS</li>
+          <li>Javascript, Jquery, Underscore</li>
+          <li>ReactJS</li>
+          <li>AngularJS</li>
+          <li>Ruby</li>
+          <li>Rails</li>
+        </ul>
+      </section>
+
+
+      <footer className="pvl tac bts border-gray">
+        <ul className="list-plain list-horz">
+          <li className="prl"><a href="https://github.com/donnieberg">Github</a></li>
+          <li className="prl"><a href="https://twitter.com/donielleberg">Twitter</a></li>
+          <li className="prl"><a href="http://www.linkedin.com/pub/donielle-berg/59/371/972">LinkedIn</a></li>
+          <li className="prl"><a href="https://drive.google.com/open?id=0BwSfguf_wbIZOGpsVWpnYzFPTWc&authuser=1">Resume</a></li>
+        </ul>
+      </footer>
+    </section>
+    );
+  }
+
+}
+
+Homepage.displayName = displayName;
+Homepage.propTypes = propTypes;
+Homepage.defaultProps = defaultProps;
+
+module.exports = Homepage;
+
+
