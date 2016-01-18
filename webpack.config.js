@@ -3,7 +3,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
-  output: { filename: 'bundle.js' },
+  output: { filename: 'dist/bundle.js' },
   // assumes all JavaScript files you edit will be in src/
   // when importing from src/<file>.js, only need to specify as <file>
   resolve: {
@@ -43,7 +43,7 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('style.css', {
+    new ExtractTextPlugin('dist/style.css', {
       allChunks: true
     })
   ]

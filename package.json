@@ -4,7 +4,7 @@
   "description": "Display work and a little bitty about me.",
   "main": "src/main.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline --content-base public",
+    "start": "webpack-dev-server --hot --inline --content-base",
     "deploy": "NODE_ENV=production webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
