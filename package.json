@@ -2,9 +2,10 @@
   "name": "Donielle-Berg-Portfolio",
   "version": "1.0.0",
   "description": "Display work and a little bitty about me.",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "webpack-dev-server --hot --inline --content-base public",
+    "deploy": "NODE_ENV=production webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
