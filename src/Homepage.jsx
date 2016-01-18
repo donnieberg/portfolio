@@ -36,7 +36,7 @@ renderProjects() {
 render(){
   return (
     <section className="pam">
-      <section className="pvl mw-800 center">
+      <section className="pvl mw-readability center">
         <h1 className="mbn tac">
         Hi, I'm Donielle.
         </h1>
@@ -54,7 +54,7 @@ render(){
         {this.renderProjects()}
       </section>
 
-      <section className="pvl mw-800 center">
+      <section className="pvl mw-readability center">
         <h1 className="tac">About Me</h1>
         <h3>Who I am</h3>
         <p>
@@ -78,12 +78,12 @@ render(){
       </section>
 
 
-      <footer className="pvl tac">
+      <footer className="pvl tac mw-readability center">
         <ul className="list-plain list-horz">
-          <li className="prl"><a href="https://github.com/donnieberg">Github</a></li>
-          <li className="prl"><a href="https://twitter.com/donielleberg">Twitter</a></li>
-          <li className="prl"><a href="http://www.linkedin.com/pub/donielle-berg/59/371/972">LinkedIn</a></li>
-          <li className="prl"><a href="https://drive.google.com/open?id=0BwSfguf_wbIZOGpsVWpnYzFPTWc&authuser=1">Resume</a></li>
+          <li className="prl pvm span_3_of_12"><a href="https://github.com/donnieberg">Github</a></li>
+          <li className="prl pvm span_3_of_12"><a href="https://twitter.com/donielleberg">Twitter</a></li>
+          <li className="prl pvm span_3_of_12"><a href="http://www.linkedin.com/pub/donielle-berg/59/371/972">LinkedIn</a></li>
+          <li className="prl pvm span_3_of_12"><a href="https://drive.google.com/open?id=0BwSfguf_wbIZOGpsVWpnYzFPTWc&authuser=1">Resume</a></li>
         </ul>
       </footer>
     </section>
