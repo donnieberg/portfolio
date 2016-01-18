@@ -27,7 +27,7 @@ class Project extends React.Component {
           <h4 className="man fw-norm">{this.props.tagline}</h4>
           <p>{this.props.skills}</p>
           <p>{this.props.description}</p>
-          <a href="{this.props.link}" className="dib">View Project</a>
+          <a href={this.props.link} className="dib">View Project</a>
         </div>
       </li>
     )
