@@ -83,7 +83,7 @@ render(){
           <li className="prl pvm span_3_of_12"><a href="https://github.com/donnieberg">Github</a></li>
           <li className="prl pvm span_3_of_12"><a href="https://twitter.com/donielleberg">Twitter</a></li>
           <li className="prl pvm span_3_of_12"><a href="http://www.linkedin.com/pub/donielle-berg/59/371/972">LinkedIn</a></li>
-          <li className="prl pvm span_3_of_12"><a href="https://drive.google.com/open?id=0BwSfguf_wbIZOGpsVWpnYzFPTWc&authuser=1">Resume</a></li>
+          <li className="prl pvm span_3_of_12"><a href="https://drive.google.com/file/d/0BwSfguf_wbIZTVdGbWVWREdhS2c/view">Resume</a></li>
         </ul>
       </footer>
     </section>
