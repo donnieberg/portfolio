@@ -70,10 +70,9 @@ render(){
         </p>
         <ul>
           <li>HTML, CSS, SASS</li>
-          <li>Javascript, Jquery, Underscore</li>
+          <li>Javascript</li>
           <li>ReactJS</li>
           <li>AngularJS</li>
-          <li>Ruby & Rails</li>
         </ul>
       </section>
 
@@ -81,9 +80,7 @@ render(){
       <footer className="pvl tac mw-readability center">
         <ul className="list-plain list-horz">
           <li className="prl pvm span_3_of_12"><a href="https://github.com/donnieberg">Github</a></li>
-          <li className="prl pvm span_3_of_12"><a href="https://twitter.com/donielleberg">Twitter</a></li>
           <li className="prl pvm span_3_of_12"><a href="http://www.linkedin.com/pub/donielle-berg/59/371/972">LinkedIn</a></li>
-          <li className="prl pvm span_3_of_12"><a href="https://drive.google.com/file/d/0BwSfguf_wbIZTVdGbWVWREdhS2c/view">Resume</a></li>
         </ul>
       </footer>
     </section>
