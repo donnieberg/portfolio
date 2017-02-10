@@ -2,8 +2,8 @@ import React from 'react';
 import Project from './Project.jsx';
 
 const projects = [
-  { id: "colorsafe", name: "Accessible Text Colors", link: "http://colorsafe.co/", image: "accessible-color-palette.png", tagline: "Explore accessible colors for your project.", skills: "{ HTML, CSS/SASS, Javascript, AngularJS }", description: "Web accessibility standards allow people with disabilities to use your site. This tool allows you to choose a color palette for your website that is accessible to everyone." },
-  { id: "promises", name: "Promises to Users", link: "http://donnieberg.github.io/promises/", image: "promises.png", tagline: "Make the internet better", skills: "{ HTML, CSS/SASS }", description: "The internet started off fully responsive, user friendly, and accessible. Then we all messed it up. Several websites miss basic UX prinipals, so my mentor and I came up with guidelines to make the internet better for users." },
+  { id: "colorsafe", name: "Accessible Text Colors", link: "http://colorsafe.co/", image: "accessible-color-palette.png", tagline: "Explore accessible colors for your project.", skills: "{ HTML, CSS/Sass, Javascript, AngularJS }", description: "Web accessibility standards allow people with disabilities to use your site. This tool allows you to choose a color palette for your website that is accessible to everyone." },
+  { id: "promises", name: "Promises to Users", link: "http://donnieberg.github.io/promises/", image: "promises.png", tagline: "Make the internet better", skills: "{ HTML, CSS/Sass }", description: "The internet started off fully responsive, user friendly, and accessible. Then we all messed it up. Several websites miss basic UX prinipals, so my mentor and I came up with guidelines to make the internet better for users." },
 ];
 
 const displayName = "Homepage";
@@ -69,7 +69,7 @@ render(){
         I primarily work in front-end languages and frameworks, and my current favorite JS framework is ReactJS. Below are the web technologies I know, and I'm always learning something new.
         </p>
         <ul>
-          <li>HTML, CSS, SASS</li>
+          <li>HTML, CSS, Sass</li>
           <li>Javascript</li>
           <li>ReactJS</li>
           <li>AngularJS</li>
