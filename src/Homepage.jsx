@@ -2,7 +2,8 @@ import React from 'react';
 import Project from './Project.jsx';
 
 const projects = [
-  { id: "colorsafe", name: "Accessible Text Colors", link: "http://colorsafe.co/", image: "accessible-color-palette.png", tagline: "Explore accessible colors for your project.", skills: "{ HTML, CSS/Sass, Javascript, AngularJS }", description: "Web accessibility standards allow people with disabilities to use your site. This tool allows you to choose a color palette for your website that is accessible to everyone." },
+  { id: "design-system-react", name: "Design System React", link: "https://react.lightningdesignsystem.com/", image: "dsr.png", tagline: "Open source library of accessible web components built in React.", skills: "{ HTML, CSS/Sass, Javascript, React }", description: "Based on the Salesforce Lightning Design System, this is library allows developers to quickly build Salesforce branded web apps that are responsive and accessible." },
+  { id: "colorsafe", name: "Color Safe", link: "http://colorsafe.co/", image: "color-safe.png", tagline: "Explore accessible colors for your project.", skills: "{ HTML, CSS/Sass, Javascript, AngularJS }", description: "Web accessibility standards allow people with disabilities to use your site. This tool allows you to choose a color palette for your website that is accessible to everyone." },
   { id: "promises", name: "Promises to Users", link: "http://donnieberg.github.io/promises/", image: "promises.png", tagline: "Make the internet better", skills: "{ HTML, CSS/Sass }", description: "The internet started off fully responsive, user friendly, and accessible. Then we all messed it up. Several websites miss basic UX prinipals, so my mentor and I came up with guidelines to make the internet better for users." },
 ];
 
