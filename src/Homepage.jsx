@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Project from './Project.jsx';
 
 const projects = [
@@ -7,9 +9,7 @@ const projects = [
   { id: "promises", name: "Promises to Users", link: "http://donnieberg.github.io/promises/", image: "promises.png", tagline: "Make the internet better", skills: "{ HTML, CSS/Sass }", description: "The internet started off fully responsive, user friendly, and accessible. Then we all messed it up. Several websites miss basic UX prinipals, so my mentor and I came up with guidelines to make the internet better for users." },
 ];
 
-const displayName = "Homepage";
-const propTypes = {};
-const defaultProps = {};
+const displayName = 'Homepage';
 
 class Homepage extends React.Component {
 
@@ -19,17 +19,19 @@ constructor(props) {
 }
 
 renderProjects() {
-  const items =  projects.map( project => {
-    return <Project
-            description={project.description}
-            image={project.image}
-            key={project.id}
-            link={project.link}
-            name={project.name}
-            skills={project.skills}
-            tagline={project.tagline}
-            />
-  });
+	const items =  projects.map( project => {
+		return (
+			<Project
+				description={project.description}
+				image={project.image}
+				key={project.id}
+				link={project.link}
+				name={project.name}
+				skills={project.skills}
+				tagline={project.tagline}
+			/>
+		)
+	});
 
   return <ul className="list-plain">{items}</ul>;
 }
@@ -90,9 +92,7 @@ render(){
 
 }
 
-Homepage.displayName = displayName;
-Homepage.propTypes = propTypes;
-Homepage.defaultProps = defaultProps;
+Homepage.displayName = 'Homepage';
 
 module.exports = Homepage;
 

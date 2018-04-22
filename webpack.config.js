@@ -1,68 +1,61 @@
 var path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== 'production'
+const webpack = require('webpack');
+
 
 module.exports = {
 	mode: 'development',
-  entry: './src/main.js',
+  entry: [
+		'./src/main.js',
+		'react-hot-loader/patch'
+	],
   output: {
-    filename: 'bundle.js' ,
-    path: path.resolve(__dirname, 'dist')
-  },
-  // assumes all JavaScript files you edit will be in src/
-  // when importing from src/<file>.js, only need to specify as <file>
-  resolve: {
-    modules: [
-      'node_modules',
-      path.resolve(__dirname, 'src')
-    ],
-    extensions: ['.js', '.json', '.jsx', '.css']
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    filename: 'bundle.js'
   },
 
-  devtool: 'source-map', // source maps to ease debugging
+	devServer: {
+		contentBase: './dist',
+		hot: true
+	},
 
   module: {
     rules: [
-      // JS & JSX Files
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: 'babel-loader',
-        options: {
-          presets: ['env', 'react']
-        }
-      },
-      {
-        test: /\.jsx$/,
-        loaders: [
-          'babel-loader?cacheDirectory&presets[]=react&presets[]=env', // invokes Babel to translate React and ES6
-        ]
-      },
-
-
-      // SASS Files
-      //
-      {
-        test: /\.scss$/,
-        loaders: [
-          'style-loader?sourceMap',
-          'css-loader?modules&importLoaders=1&localIdentName=[name]--[local]',
-          'sass-loader?sourceMap'
+			// JS & JSX Files
+			{
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules/,
+				use: ['babel-loader']
+			},
+			// SASS Files
+			{
+				test: /\.s?[ac]ss$/,
+        use: [
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          //'postcss-loader',
+          'sass-loader',
         ],
         exclude: /node_modules|lib/
-      },
-
-			{
-				test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					fallback: "style-loader",
-					use: "css-loader"
-				})
-			}
+      }
 		]
 	},
 
+	resolve: {
+		extensions: ['*', '.js', '.jsx']
+	},
+
   plugins: [
-  ]
+		new MiniCssExtractPlugin({
+			// Options similar to the same options in webpackOptions.output
+			// both options are optional
+			filename: devMode ? '[name].css' : '[name].[hash].css',
+			chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+		}),
+		new webpack.HotModuleReplacementPlugin()
+	]
 
 };
 

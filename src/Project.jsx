@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const displayName = "Project";
+const displayName = 'Project';
 const propTypes = {
-  myPropType: React.PropTypes.string,
+  myPropType: PropTypes.string,
 };
 const defaultProps = {
   myDefaultProp: 'test',
@@ -20,7 +21,7 @@ class Project extends React.Component {
     return (
       <li key={this.props.id} className="pvl cf">
         <div className="fl span_6_of_12 tac">
-          <img src={`images/${this.props.image}`} alt={this.props.image} />
+					<img src={`images/${this.props.image}`} alt={this.props.image} />
         </div>
         <div className="pls fr span_6_of_12">
           <h3 className="mvs f3 fw-norm caps">{this.props.name}</h3>

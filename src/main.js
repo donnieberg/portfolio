@@ -6,5 +6,8 @@ import './css/main.scss';
 
 ReactDOM.render(
   <Homepage />,
-  document.getElementById("app")
+  document.getElementById('app')
 );
+
+module.hot.accept();
+
