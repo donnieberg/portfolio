@@ -39,27 +39,25 @@ renderProjects() {
 render(){
   return (
     <section className="pam">
-      <section className="pvl mw-readability center">
-        <h1 className="mbn tac">
-        Hi, I'm Donielle.
+      <section className="pvl mw-projects center">
+        <h1 className="mbn">
+					Hi, I'm Donielle.
         </h1>
-        <h2 className="f3 tac">
-        Prior to becoming a developer, I once told an interviewer I liked coding, but she thought I said Codeine.
-        I didn't get the job.
+        <h2 className="mtn">
+					I'm a Senior UI Developer specializing in Accessibility.
         </h2>
-        <p>
-        Fortunately, now that I code for a living, people aren't confused by that anymore. I'm currently a senior ux engineer on the User Experience Team at Salesforce. I figured out how to get out of most of the overhead meetings that are inherent to big companies so I spend 85% of my day in the terminal. I couldn't be happier.
-        </p>
+				<p>
+					I currently work on the Accessibility team at Salesforce building prototypes, contributing to our open-source Design System React library, and teaching other engineers how to build accessible web apps. I like semantic html, functional css, and above all creating apps that everyone can use regardless of differing abilities.
+				</p>
       </section>
 
       <section className="pvl mw-projects center">
-        <h1 className="tac">Projects</h1>
+        <h1>Projects</h1>
         {this.renderProjects()}
       </section>
 
       <section className="pvl mw-readability center">
-        <h1 className="tac">About Me</h1>
-        <h3>Who I am</h3>
+        <h1>About Me</h1>
         <p>
         I started working as a developer in 2013. Prior to that, I was an Event Planner at the KIPP Foundation, a non-profit in Education Reform. I discovered I loved programming in a fortuitous way. At KIPP, I needed to send a series of email blasts, and our sole web developer told me he'd teach me some basic html/css so I could do it myself. From there, I started teaching myself front-end code, pestered friends to make their websites, and in the summer of 2013, went through a full-time three-month web development bootcamp.
         </p>
@@ -67,7 +65,7 @@ render(){
         I'm originally from Wisconsin, love to hike, read, explore the Bay Area and beyond, and every summer I crave Spotted Cow and deep-fried cheese curds.
         I care about social justice issues and web accessibility. I mentor a coding course with The Last Mile at San Quentin State Prison and am interested in doing pro bono work for non-profits.
         </p>
-        <h3>What I know</h3>
+        <h3>Skills</h3>
         <p>
         I primarily work in front-end languages and frameworks, and my current favorite JS framework is ReactJS. Below are the web technologies I know, and I'm always learning something new.
         </p>
