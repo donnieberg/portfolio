@@ -69,7 +69,7 @@ input:focus,
 textarea:focus,
 button { outline: none; }
 
-a { transition:all .4s ease; color: inherit; text-decoration:none; border-bottom: 2px solid $color-anchor; }
+a { transition:all .4s ease; color: inherit; text-decoration:none; border-bottom: 2px solid #000; }
 a:hover { color: $color-anchor; text-decoration:none; border-bottom: 2px solid $color-anchor; }
 
 /* BORDER WIDTHS & STYLE ============================================================================= */
@@ -103,13 +103,23 @@ a:hover { color: $color-anchor; text-decoration:none; border-bottom: 2px solid $
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.background-teal {
+  background-color: $color-bg-primary;
+  background-image: -webkit-linear-gradient(left, #68B2B8, #89C6CA);
+}
+
 .background-siriusTamed {
   background-color: $color-bg-primary;
-  background-image: -webkit-linear-gradient(left, $color-softMint, $color-ltGray);
+  background-image: -webkit-linear-gradient(left, $color-ltGray, $color-softMint);
 }
 .background-ash {
   background-color: $color-bg-primary;
   background-image: -webkit-linear-gradient(left, $color-slate, $color-drkSlate);
+}
+
+.background-lt-blue {
+	background-color: $color-bg-lt-blue;
 }
 
 
@@ -159,7 +169,7 @@ a:hover { color: $color-anchor; text-decoration:none; border-bottom: 2px solid $
 .span_2_of_12  { width: 15.32%; }
 .span_1_of_12  { width: 6.86%;  }
 
-.mw-projects { max-width: 1000px; }
+.mw-projects { max-width: 1100px; }
 }
 
 /* ==========================================================================

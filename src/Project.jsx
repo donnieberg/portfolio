@@ -20,10 +20,10 @@ class Project extends React.Component {
   render(){
     return (
       <li key={this.props.id} className="pvl cf">
-        <div className="fl span_6_of_12 tac">
+        <div className="fl span_8_of_12 tac">
 					<img src={`images/${this.props.image}`} alt={this.props.image} />
         </div>
-        <div className="pls fr span_6_of_12">
+        <div className="pls fr span_4_of_12">
           <h3 className="mvs f3 fw-norm caps">{this.props.name}</h3>
           <h4 className="man fw-norm">{this.props.tagline}</h4>
           <p>{this.props.skills}</p>

@@ -38,25 +38,27 @@ renderProjects() {
 
 render(){
   return (
-    <section className="pam">
-      <section className="pvl mw-projects center">
+    <section>
+      <section className="pvl phm mw-projects center">
         <h1 className="mbn">
 					Hi, I'm Donielle.
         </h1>
         <h2 className="mtn">
 					I'm a Senior UI Developer specializing in Accessibility.
         </h2>
-				<p>
+				<p className="mw-readability">
 					I currently work on the Accessibility team at Salesforce building prototypes, contributing to our open-source Design System React library, and teaching other engineers how to build accessible web apps. I like semantic html, functional css, and above all creating apps that everyone can use regardless of differing abilities.
 				</p>
       </section>
 
-      <section className="pvl mw-projects center">
-        <h1>Projects</h1>
-        {this.renderProjects()}
-      </section>
+			<section className="phm background-peach">
+				<div className="pvl mw-projects center">
+					<h1>Projects</h1>
+					{this.renderProjects()}
+				</div>
+			</section>
 
-      <section className="pvl mw-readability center">
+      <section className="phm pvl mw-readability center">
         <h1>About Me</h1>
         <p>
         I started working as a developer in 2013. Prior to that, I was an Event Planner at the KIPP Foundation, a non-profit in Education Reform. I discovered I loved programming in a fortuitous way. At KIPP, I needed to send a series of email blasts, and our sole web developer told me he'd teach me some basic html/css so I could do it myself. From there, I started teaching myself front-end code, pestered friends to make their websites, and in the summer of 2013, went through a full-time three-month web development bootcamp.
@@ -78,7 +80,7 @@ render(){
       </section>
 
 
-      <footer className="pvl tac mw-readability center">
+      <footer className="pvl phm mw-readability center">
         <ul className="list-plain list-horz">
           <li className="prl pvm span_3_of_12"><a href="https://github.com/donnieberg">Github</a></li>
           <li className="prl pvm span_3_of_12"><a href="http://www.linkedin.com/pub/donielle-berg/59/371/972">LinkedIn</a></li>
