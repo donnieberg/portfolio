@@ -20,16 +20,15 @@ hr {
 
 
 .header { 
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 25%;
     min-width: 420px;
-    max-height: 100vh;
-    background: yellow;
 }
 
 .main {
     width: 75%;
+    margin-left: 420px;
 }
 
 .nav {
@@ -167,7 +166,6 @@ a {
 }
 
 .tabs {
-    height: 150px;
     display: flex;
     flex-direction: column;
 }

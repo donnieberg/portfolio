@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import dfPhoto from './dreamforceCustomerChallenge.png';
 import '../node_modules/colors.css/css/colors.min.css';
 import './App.css';
 import data from './data.js';
@@ -6,8 +7,8 @@ import Tabset from './tabset.js';
 
 function App() {
     return (
-        <div className="phxx df df-spaceBetween of-auto hideScrollbar">
-            <header className="ptxx df df-column df-alignSelf header">
+        <div className="phxx df df-spaceBetween">
+            <header className="ptxx df df-column header">
                 <h1 className="phs dib bg-blue text-1 white bold tracking-tight">Donielle Berg</h1>
                 <p className="mts text-3 bold tracking-tight">Lead Accessibility Engineer</p>
                 <p className="mts text-3">I build accessible, inclusive, and useful products on the web.</p>
@@ -30,8 +31,8 @@ function App() {
                     </div>
                     <article>
                         <h3 className="text-3">Figma A11y Annotations Library</h3>
-                        <p className="mtl">{data.figmaA11y}</p>
-                        <Tabset.Tabs aria-label="Projects">
+                        <p className="mvl">{data.figmaA11y}</p>
+                        <Tabset.Tabs aria-label="Figma A11y Demos">
                             <Tabset.Item key="FoR" title="Video">
                                 <iframe 
                                     width="560" 
@@ -58,9 +59,27 @@ function App() {
                             </Tabset.Item>
                         </Tabset.Tabs>
                     </article>
-                    <div>
-                    {data.about}
-                    </div>
+
+                    <article className="ptxx">
+                        <h3 className="text-3">Dreamforce A11y Customer Challenge</h3>
+                        <p className="mvl">{data.dreamforceProject}</p>
+                        <Tabset.Tabs aria-label="Dreamforce A11y Demos">
+                            <Tabset.Item key="DFvid" title="Screenshot">
+                                <img className="" src={dfPhoto} alt="Dreamforce Project Screenshot" />
+                            </Tabset.Item>
+                            <Tabset.Item key="DFgif" title="GIF">
+                                <iframe
+                                    className="projectVideo"
+                                    src="https://drive.google.com/file/d/1loFu4zE2NPKWvVnTANz_XTZQw-ANQ9fx/preview"
+                                    title="GIF Dreamforce Project demo" 
+                                    frameBorder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowFullScreen
+                                >
+                                </iframe>
+                            </Tabset.Item>
+                        </Tabset.Tabs>
+                    </article>
                 </div>
             </main>
         </div>
