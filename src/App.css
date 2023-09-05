@@ -1,3 +1,42 @@
+body {
+    margin: 0;
+    font-size: 16px; 
+    line-height: 1.625;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #000;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+.header { 
+    position: sticky;
+    top: 0;
+    width: 25%;
+    min-width: 420px;
+    max-height: 100vh;
+    background: yellow;
+}
+
+.main {
+    width: 75%;
+}
+
+.nav {
+    padding-top: 6rem;
+}
+
+
 /*
  * ===========================================================
  * Text
@@ -83,6 +122,8 @@ a {
 .df-end { justify-content: end; }
 .df-center { justify-content: center; }
 .df-grow { flex-grow: 1; }
+.df-start { align-items: flex-start; }
+.df-alignSelf { align-self: flex-start; }
 
 .dib { display: inline-block; }
 .db { display: block; }
@@ -92,9 +133,18 @@ a {
 .width-75 { width: 75%; }
 .width-100 { width: 100%; }
 
+.min-height-100 { min-height: 100vh; }
+
 .ofx-scroll {overflow-x: scroll; }
 .ofy-scroll {overflow-y: scroll; }
+.ofy-hidden {overflow-y: hidden; }
+.of-auto {overflow: auto; }
 
+.hideScrollbar::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 /*
  * ===========================================================
@@ -110,39 +160,59 @@ a {
  * Custom
  */
 
-body {
-    font-size: 16px; 
-    line-height: 1.625;
-}
-h1, h2, h3, h4, h5, h6, p {
-    padding: 0;
-    margin: 0;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #000;
-    margin: 1em 0;
-    padding: 0;
-}
-
-
-.header { 
-    width: 25%;
-    min-width: 425px;
-}
-
-.main {
-    width: 75%;
-}
-
-.nav {
-    padding-top: 6rem;
-}
 
 .projectVideo {
-    height: 600px;
+    height: 500px;
     width: 100%;
+}
+
+.tabs {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs.vertical {
+    flex-direction: row;
+}
+
+/*
+ * ===========================================================
+ * Custom Components
+ */
+[role=tablist] {
+  display: flex;
+}
+
+[role=tablist][aria-orientation=horizontal] {
+  border-bottom: 1px solid gray;
+}
+
+[role=tablist][aria-orientation=vertical] {
+  flex-direction: column;
+  border-right: 1px solid gray;
+}
+
+[role=tab] {
+  padding: 10px;
+}
+
+[role=tablist][aria-orientation=horizontal] [role=tab] {
+  border-bottom: 3px solid transparent;
+}
+
+[role=tablist][aria-orientation=vertical] [role=tab] {
+  border-right: 3px solid transparent;
+}
+
+[role=tablist] [role=tab][aria-selected=true] {
+  border-color: var(--blue);
+}
+
+[role=tab][aria-disabled] {
+  opacity: 0.5;
+}
+
+[role=tabpanel] {
+  padding: 10px;
 }

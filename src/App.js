@@ -6,8 +6,8 @@ import Tabset from './tabset.js';
 
 function App() {
     return (
-        <div className="df ptxx phxx">
-            <header className="header">
+        <div className="phxx df df-spaceBetween of-auto hideScrollbar">
+            <header className="ptxx df df-column df-alignSelf header">
                 <h1 className="phs dib bg-blue text-1 white bold tracking-tight">Donielle Berg</h1>
                 <p className="mts text-3 bold tracking-tight">Lead Accessibility Engineer</p>
                 <p className="mts text-3">I build accessible, inclusive, and useful products on the web.</p>
@@ -19,10 +19,10 @@ function App() {
                     </ul>
                 </nav>
             </header>
-            <main className="main pll text-3">
-                <div>
+            <main className="main ptxx pll text-3">
+                <article>
                     {data.about}
-                </div>
+                </article>
                 <div className="mvx">
                     <div className="df df-end">
                         <hr className="df-grow mrm mv-auto" />
@@ -31,8 +31,36 @@ function App() {
                     <article>
                         <h3 className="text-3">Figma A11y Annotations Library</h3>
                         <p className="mtl">{data.figmaA11y}</p>
-                        <Tabset />
+                        <Tabset.Tabs aria-label="Projects">
+                            <Tabset.Item key="FoR" title="Video">
+                                <iframe 
+                                    width="560" 
+                                    height="315" 
+                                    className="projectVideo"
+                                    src="https://www.youtube.com/embed/eOvN9b7xDR0?si=LIVFakHWNKs2ONEW" 
+                                    title="Youtube Figma A11y Annotations Demo" 
+                                    frameBorder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowFullScreen
+                                >
+                                </iframe>
+                            </Tabset.Item>
+                            <Tabset.Item key="MaR" title="GIF">
+                                <iframe
+                                    className="projectVideo"
+                                    src="https://drive.google.com/file/d/1ChieYcAHwPVqCARhgS7AKn2LWdIFxTUx/preview"
+                                    title="GIF Figma A11y Annotations Demo" 
+                                    frameBorder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowFullScreen
+                                >
+                                </iframe>
+                            </Tabset.Item>
+                        </Tabset.Tabs>
                     </article>
+                    <div>
+                    {data.about}
+                    </div>
                 </div>
             </main>
         </div>
