@@ -45,7 +45,7 @@ function App() {
                                 <iframe 
                                     width="560" 
                                     height="315" 
-                                    className="projectVideo projectVideo--screenM"
+                                    className="projectVideo projectVideo--screenM projectVideo--screenL"
                                     src="https://www.youtube.com/embed/eOvN9b7xDR0?si=LIVFakHWNKs2ONEW" 
                                     title="Youtube Figma A11y Annotations Demo" 
                                     frameBorder="0" 
@@ -56,7 +56,7 @@ function App() {
                             </Tabset.Item>
                             <Tabset.Item key="MaR" title="GIF">
                                 <iframe
-                                    className="projectVideo projectVideo--screenM"
+                                    className="projectVideo projectVideo--screenM projectVideo--screenL"
                                     src="https://drive.google.com/file/d/1ChieYcAHwPVqCARhgS7AKn2LWdIFxTUx/preview"
                                     title="GIF Figma A11y Annotations Demo" 
                                     frameBorder="0" 
@@ -72,11 +72,11 @@ function App() {
                         <p className="mvl--screenM">{data.dreamforceProject}</p>
                         <Tabset.Tabs aria-label="Dreamforce A11y Demos">
                             <Tabset.Item key="DFvid" title="Screenshot">
-                                <img className="projectVideo projectVideo--screenM " src={dfPhoto} alt="Dreamforce Project Screenshot" />
+                                <img className="projectVideo projectVideo--screenM projectVideo--screenL" src={dfPhoto} alt="Dreamforce Project Screenshot" />
                             </Tabset.Item>
                             <Tabset.Item key="DFgif" title="GIF">
                                 <iframe
-                                    className="projectVideo projectVideo--screenM"
+                                    className="projectVideo projectVideo--screenM projectVideo--screenL"
                                     src="https://drive.google.com/file/d/1loFu4zE2NPKWvVnTANz_XTZQw-ANQ9fx/preview"
                                     title="GIF Dreamforce Project demo" 
                                     frameBorder="0" 
@@ -90,7 +90,7 @@ function App() {
                     <article className="ptxx--screenM">
                         <h3 className="dib phs mvm mv0--screenM text-3--screenM bg-blue white bold tracking-tight">Design System A11y User Research</h3>
                         <p className="mvl--screenM">{data.prototype}</p>
-                        <img className="projectVideo projectVideo--screenM " src={prototypePhoto} alt="Screenshot of prototype" />
+                        <img className="projectVideo projectVideo--screenM projectVideo--screenL" src={prototypePhoto} alt="Screenshot of prototype" />
                     </article>
                 </section>
                 <section data-section id="experience" className="ptx">

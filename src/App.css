@@ -21,7 +21,6 @@ hr {
 
 img, .projectVideo {
     width: 100%;
-    height: auto;
 }
 
 
@@ -184,11 +183,6 @@ a {
 
 .year { min-width: 150px;}
 
-.projectVideo {
-    min-height: 500px;
-    height: 100%;
-    width: 100%;
-}
 
 .tabs {
     display: flex;
@@ -267,22 +261,14 @@ a {
     .text-3--screenM { font-size: 1.25rem; }
     .text-4--screenM { font-size: 1rem; }
 
+}
+
+@media screen and (min-width: 1200px) {
     .projectVideo--screenM {
-        min-height: 500px;
+        min-height: 350px;
         height: 100%;
         width: 100%;
     }
-
-}
-
-@media screen and (min-width: 1550px) {
-    .pll--screenL { padding-left: 2rem; }
-    .phxx--screenL { 
-        padding-left: 6rem; 
-        padding-right: 6rem; 
-    }
-
-    .df--screenL { display: flex; }
     .header { 
         position: fixed;
         top: 0;
@@ -297,6 +283,20 @@ a {
 
     .nav {
         padding-top: 6rem;
+    }
+}
+
+@media screen and (min-width: 1550px) {
+    .pll--screenL { padding-left: 2rem; }
+    .phxx--screenL { 
+        padding-left: 6rem; 
+        padding-right: 6rem; 
+    }
+    .df--screenL { display: flex; }
+    .projectVideo--screenL {
+        min-height: 450px;
+        height: 100%;
+        width: 100%;
     }
 }
 
