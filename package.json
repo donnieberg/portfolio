@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "colors.css": "^3.0.0",
+    "react-scrollspy": "^3.4.3",
     "react-stately": "^3.25.0"
   }
 }
