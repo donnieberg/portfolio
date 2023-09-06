@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Scrollspy from 'react-scrollspy';
 import logo from './logo.svg';
 import dfPhoto from './dreamforceCustomerChallenge.png';
 import '../node_modules/colors.css/css/colors.min.css';
