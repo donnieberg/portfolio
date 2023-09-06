@@ -1,6 +1,7 @@
 const labels = {
     figmaA11y: "A11y Annotations in designs help engineers build accessibly from the beginning rather than having to fix a bunch of bugs at the end. I created a Figma A11y Annotation Library to help designers do this more efficiently and create cohesion in the language, design, and best practices for engineers.",
     dreamforceProject: "I co-created an interactive game for customers to experience inaccessibility first hand. We had two computers: one with an accessible conference website, the other with an inaccessible version. The challenge was who could register the fastest for the conference. There were so many ‘ah-ha!’ moments when the inaccessible version prevented people from completing. Customers told us this was the most impactful experience at Dreamforce.",
+    prototype: "In updating our Design System, I co-created a react prototype to test out different versions of our components with People with Disabilities. I also wrote the script for user research (executed by Level Access). The project provided clear direction for our Design System team to update the components to WCAG 2.2 and improve the overall user experience.",
     experience1: {
         year: "2017-Present",
         title: "Lead Accessibility Engineer",

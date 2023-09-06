@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from './logo.svg';
 import dfPhoto from './dreamforceCustomerChallenge.png';
+import prototypePhoto from './designSystemPrototype.png';
 import '../node_modules/colors.css/css/colors.min.css';
 import './App.css';
 import data from './data.js';
@@ -9,16 +10,16 @@ import Navigation from './navigation.js';
 
 function App() {
     return (
-        <div className="phxx df df-spaceBetween">
-            <header className="ptxx df df-column header">
-                <h1 className="phs dib bg-blue text-1 white bold tracking-tight">Donielle Berg</h1>
-                <p className="mts text-3 bold tracking-tight">Lead Accessibility Engineer</p>
-                <p className="mts text-3">I build accessible, inclusive, and useful products on the web.</p>
+        <div className="phm phl--screenM phxx--screenL df--screenM df-spaceBetween--screenM">
+            <header className="mtm mt0--screenM ptxx--screenM df df-column header">
+                <h1 className="phs dib bg-blue text-1 text-1--screenM white bold tracking-tight">Donielle Berg</h1>
+                <p className="mts text-3 text-3--screenM bold tracking-tight">Lead Accessibility Engineer</p>
+                <p className="mts text-4">I build accessible, inclusive, and useful products on the web.</p>
                 <Navigation />
             </header>
-            <main className="main ptxx plx text-3">
+            <main className="main ptxx--screenM plx--screenM text-3--screenM">
                 <section data-section id="about">
-                    <p className="mbm text-2">
+                    <p className="mbs text-3 text-2--screenM tracking-tight">
                         Came here by accident but staying with intention.
                     </p>
                     <p className="mbm">
@@ -37,14 +38,14 @@ function App() {
                         <h2 className="text-2 caps bold">Projects</h2>
                     </div>
                     <article>
-                        <h3 className="dib phs text-3 bg-blue white bold tracking-tight">Figma A11y Annotations Library</h3>
-                        <p className="mvl">{data.figmaA11y}</p>
+                        <h3 className="dib phs mvm mv0--screenM text-3--screenM bg-blue white bold tracking-tight">Figma A11y Annotations Library</h3>
+                        <p className="mvl--screenM">{data.figmaA11y}</p>
                         <Tabset.Tabs aria-label="Figma A11y Demos">
                             <Tabset.Item key="FoR" title="Video">
                                 <iframe 
                                     width="560" 
                                     height="315" 
-                                    className="projectVideo"
+                                    className="projectVideo projectVideo--screenM"
                                     src="https://www.youtube.com/embed/eOvN9b7xDR0?si=LIVFakHWNKs2ONEW" 
                                     title="Youtube Figma A11y Annotations Demo" 
                                     frameBorder="0" 
@@ -55,7 +56,7 @@ function App() {
                             </Tabset.Item>
                             <Tabset.Item key="MaR" title="GIF">
                                 <iframe
-                                    className="projectVideo"
+                                    className="projectVideo projectVideo--screenM"
                                     src="https://drive.google.com/file/d/1ChieYcAHwPVqCARhgS7AKn2LWdIFxTUx/preview"
                                     title="GIF Figma A11y Annotations Demo" 
                                     frameBorder="0" 
@@ -66,17 +67,16 @@ function App() {
                             </Tabset.Item>
                         </Tabset.Tabs>
                     </article>
-
-                    <article className="ptxx">
-                        <h3 className="dib phs text-3 bg-blue white bold tracking-tight">Dreamforce A11y Customer Challenge</h3>
-                        <p className="mvl">{data.dreamforceProject}</p>
+                    <article className="ptxx--screenM">
+                        <h3 className="dib phs mvm mv0--screenM text-3--screenM bg-blue white bold tracking-tight">Dreamforce A11y Customer Challenge</h3>
+                        <p className="mvl--screenM">{data.dreamforceProject}</p>
                         <Tabset.Tabs aria-label="Dreamforce A11y Demos">
                             <Tabset.Item key="DFvid" title="Screenshot">
-                                <img className="projectVideo " src={dfPhoto} alt="Dreamforce Project Screenshot" />
+                                <img className="projectVideo projectVideo--screenM " src={dfPhoto} alt="Dreamforce Project Screenshot" />
                             </Tabset.Item>
                             <Tabset.Item key="DFgif" title="GIF">
                                 <iframe
-                                    className="projectVideo"
+                                    className="projectVideo projectVideo--screenM"
                                     src="https://drive.google.com/file/d/1loFu4zE2NPKWvVnTANz_XTZQw-ANQ9fx/preview"
                                     title="GIF Dreamforce Project demo" 
                                     frameBorder="0" 
@@ -87,15 +87,20 @@ function App() {
                             </Tabset.Item>
                         </Tabset.Tabs>
                     </article>
+                    <article className="ptxx--screenM">
+                        <h3 className="dib phs mvm mv0--screenM text-3--screenM bg-blue white bold tracking-tight">Design System A11y User Research</h3>
+                        <p className="mvl--screenM">{data.prototype}</p>
+                        <img className="projectVideo projectVideo--screenM " src={prototypePhoto} alt="Screenshot of prototype" />
+                    </article>
                 </section>
                 <section data-section id="experience" className="ptx">
                     <div className="mtx df df-end">
                         <hr className="df-grow mrm mv-auto" />
                         <h2 className="text-2 caps bold">Experience</h2>
                     </div>
-                    <article className="mtx df">
+                    <article className="mtx df--screenL">
                         <p className="year">{data.experience1.year}</p>
-                        <div className="pll">
+                        <div className="pll--screenL">
                             <div className="df df-spaceBetween">
                                 <h3>{data.experience1.title}</h3>
                                 <h3>{data.experience1.company}</h3>
@@ -103,9 +108,9 @@ function App() {
                             <p className="mtm">{data.experience1.description}</p>
                         </div>
                     </article>
-                    <article className="mtx df">
+                    <article className="mtx df--screenL">
                         <p className="year">{data.experience2.year}</p>
-                        <div className="pll">
+                        <div className="pll--screenL">
                             <div className="df df-spaceBetween">
                                 <h3>{data.experience2.title}</h3>
                                 <h3>{data.experience2.company}</h3>
@@ -113,9 +118,9 @@ function App() {
                             <p className="mtm">{data.experience2.description}</p>
                         </div>
                     </article>
-                    <article className="mtx df">
+                    <article className="mtx df--screenL">
                         <p className="year">{data.experience3.year}</p>
-                        <div className="pll">
+                        <div className="pll--screenL">
                             <div className="df df-spaceBetween">
                                 <h3>{data.experience3.title}</h3>
                                 <h3>{data.experience3.company}</h3>

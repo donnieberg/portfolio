@@ -19,31 +19,20 @@ hr {
     padding: 0;
 }
 
-
-.header { 
-    position: fixed;
-    top: 0;
-    width: 25%;
-    min-width: 420px;
+img, .projectVideo {
+    width: 100%;
+    height: auto;
 }
 
-.main {
-    width: 75%;
-    margin-left: 420px;
-}
-
-.nav {
-    padding-top: 6rem;
-}
 
 
 /*
  * ===========================================================
  * Text
  */
-.text-1 { font-size: 3.25rem; }
-.text-2 { font-size: 2.25rem; }
-.text-3 { font-size: 1.25rem; }
+.text-1 { font-size: 2.25rem; }
+.text-2 { font-size: 1.75rem; }
+.text-3 { font-size: 1.50rem; }
 .text-4 { font-size: 1rem; }
 
 .tracking-tight { letter-spacing: -.025rem; }
@@ -77,10 +66,6 @@ a {
 .phs { padding-left: .5rem; padding-right: .5rem; }
 .phm { padding-left: 1rem; padding-right: 1rem; }
 .phl { padding-left: 2rem; padding-right: 2rem; }
-.phxx { 
-    padding-left: 6rem; 
-    padding-right: 6rem; 
-}
 
 .pll { padding-left: 2rem; }
 .plx { padding-left: 3rem; }
@@ -92,7 +77,6 @@ a {
 .pvx { padding-top: 3rem; padding-bottom: 3rem;}
 
 .ptx { padding-top: 3rem; }
-.ptxx { padding-top: 6rem; }
 
 .maxs { margin: .25rem; }
 .mas { margin: .5rem; }
@@ -252,4 +236,67 @@ a {
   padding: 10px;
 }
 
+
+/*
+ * ===========================================================
+ * Media Queries
+ */
+
+@media screen and (min-width: 1024px) {
+    .df--screenM { display: flex; }
+    .df-column--screenM { flex-direction: column; }
+    .df-baseline--screenM { align-items: baseline; }
+    .df-alignCenter--screenM { align-items: center; }
+    .df-spaceBetween--screenM { justify-content: space-between; }
+    .df-end--screenM { justify-content: end; }
+    .df-center--screenM { justify-content: center; }
+    .df-grow--screenM { flex-grow: 1; }
+    .df-start--screenM { align-items: flex-start; }
+    .df-alignSelf--screenM { align-self: flex-start; }
+
+    .phl--screenM { padding-left: 2rem; padding-right: 2rem;}
+    .pll--screenM { padding-left: 2rem; }
+    .plx--screenM { padding-left: 3rem; }
+    .ptxx--screenM { padding-top: 6rem; }
+    .mt0--screenM { margin-top: 0rem; }
+    .mv0--screenM { margin-top: 0rem; margin-bottom: 0rem; }
+    .mvl--screenM { margin-top: 2rem; margin-bottom: 2rem; }
+
+    .text-1--screenM { font-size: 2.75rem; }
+    .text-2--screenM { font-size: 2rem; }
+    .text-3--screenM { font-size: 1.25rem; }
+    .text-4--screenM { font-size: 1rem; }
+
+    .projectVideo--screenM {
+        min-height: 500px;
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 1550px) {
+    .pll--screenL { padding-left: 2rem; }
+    .phxx--screenL { 
+        padding-left: 6rem; 
+        padding-right: 6rem; 
+    }
+
+    .df--screenL { display: flex; }
+    .header { 
+        position: fixed;
+        top: 0;
+        width: 25%;
+        min-width: 420px;
+    }
+
+    .main {
+        width: 75%;
+        margin-left: 420px;
+    }
+
+    .nav {
+        padding-top: 6rem;
+    }
+}
 
