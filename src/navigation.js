@@ -39,7 +39,7 @@ const Navigation = () => {
 
     return (
         <>
-            <nav className="nav text-4 caps bold">
+            <nav className="nav--screenM text-4 caps bold">
                 <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
                     <li>
                         <a href="#about" onClick={handleClick('about')} className={activeSection === 'about' ? 'mvs df df-alignCenter navLink active' : 'mvs df df-alignCenter navLink'}>

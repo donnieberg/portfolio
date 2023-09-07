@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import classNames from 'classnames';
+import { GiHamburgerMenu } from "react-icons/gi";
 import logo from './logo.svg';
 import dfPhoto from './dreamforceCustomerChallenge.png';
 import prototypePhoto from './designSystemPrototype.png';
+
 import '../node_modules/colors.css/css/colors.min.css';
 import './App.css';
 import data from './data.js';
@@ -9,27 +12,59 @@ import Tabset from './tabset.js';
 import Navigation from './navigation.js';
 
 function App() {
+    const [navMenu, setNavMenu] = useState(false);
+
+    const handleMenuTriggerClick = () => {
+        setNavMenu(!navMenu);
+    };
+
     return (
         <div className="phm phl--screenM phxx--screenL df--screenM df-spaceBetween--screenM">
             <header className="mtm mt0--screenM ptxx--screenM df df-column header">
-                <h1 className="phs dib bg-blue text-1 text-1--screenM white bold tracking-tight">Donielle Berg</h1>
+                <section className="sticky pos-rel--screenM">
+                    <div className="phs df bg-blue df-spaceBetween df-alignCenter db--screenM ">
+                        <h1 className="dib text-1 text-1--screenM white bold tracking-tight">Donielle Berg</h1>
+                        <button className="mvs button navButton white" aria-label="Toggle Navigation Menu" onClick={handleMenuTriggerClick}>
+                            <GiHamburgerMenu className="buttonIcon" />
+                        </button>
+                    </div>
+                    <nav className={classNames("pam mbm nav bg-white brs", {"dn": !navMenu})}>
+                        <ul style={{ listStyle: 'none', margin: 0, padding: 0 }} className="text-4 caps">
+                            <li className="pos-rel mvm">
+                                <a href="#about" className="pvs a-underline" onClick={handleMenuTriggerClick}>
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li className="pos-rel mvm">
+                                <a href="#projects" className="pvs a-underline" onClick={handleMenuTriggerClick}>
+                                    <span>Projects</span>
+                                </a>
+                            </li>
+                            <li className="pos-rel mvm">
+                                <a href="#experience" className="pvs a-underline" onClick={handleMenuTriggerClick}>
+                                    <span>Experience</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
                 <p className="mts text-3 text-3--screenM bold tracking-tight">Lead Accessibility Engineer</p>
                 <p className="mts text-4">I build accessible, inclusive, and useful products on the web.</p>
                 <Navigation />
             </header>
-            <main className="main ptxx--screenM plx--screenM text-3--screenM">
-                <section data-section id="about">
-                    <p className="mbs text-3 text-2--screenM tracking-tight">
-                        Came here by accident but staying with intention.
+            <main className="main text-3--screenM plx--screenM">
+                <section data-section id="about" className="ptxx--screenM">
+                    <p className="mbs mtl mt0--screenM text-3 text-2--screenM tracking-tight">
+                        Arrived by accident, staying with intention.
                     </p>
                     <p className="mbm">
-                        I accidentally became a UI Engineer because I needed to create HTML email templates while running events at a non-profit. 
-                        Then I accidentally got into accessibility because I made an inaccessible website and a loving friend told me so.
-                        I'm here with intetion because this work is fun, challenging, and most of all, it's needed. 
+                        I accidentally became a UI Engineer while creating email templates as an Event Planner at a non-profit. 
+                        I accidentally got into accessibility because a friend lovingly told me they couldn't use what I had built.
+                        I'm staying with intetion because the work is fun, challenging, and most of all, needed. 
                         Accessibility removes barriers for People with Disabilities and is the most tangible way to build inclusion into a product. 
                     </p>
                     <p className="mbm">
-                        I was a long-time volunteer at San Quentin Prison and am interested in Justice Reform. I'm based in the Bay Area, CA, and on the weekends you can find me spending time with family, hiking, sewing, or having dance parties in my living room.
+                         I'm based in the Bay Area, CA. I was a long-time volunteer at San Quentin Prison and am still very interested in Justice Reform. On the weekends you can find me spending time with family, hiking, sewing, or having dance parties in my living room.
                     </p>
                 </section>
                 <section data-section id="projects" className="ptx">
@@ -130,7 +165,7 @@ function App() {
                     </article>
                 </section>
                 <p className="mvxx italic">
-                    This website was created by me with the help of <a href="https://create-react-app.dev/">Create React App</a>, <a className="https://pages.github.com/">Github pages</a>, and the design was inspired by <a href="https://github.com/bchiang7">Brittany Chiang</a>.
+                    This website was created by me with the help of &nbsp;<span className="pos-rel"><a className="a-underline--screenM" href="https://create-react-app.dev/">Create React App</a></span>,&nbsp;<span className="pos-rel"><a className="a-underline--screenM" href="https://pages.github.com/">Github</a></span>, and the design was inspired by&nbsp;<span className="pos-rel"><a className="a-underline--screenM" href="https://github.com/bchiang7">Brittany Chiang</a>.</span> 
                 </p>
             </main>
         </div>

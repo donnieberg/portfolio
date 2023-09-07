@@ -23,6 +23,10 @@ img, .projectVideo {
     width: 100%;
 }
 
+button {
+    border: none;
+    background: none;
+}
 
 
 /*
@@ -47,9 +51,6 @@ img, .projectVideo {
 a { 
     text-decoration: none;
     color: #0074d9; 
-    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-duration: .15s;
 }
 
 
@@ -130,6 +131,7 @@ a {
 .dib { display: inline-block; }
 .db { display: block; }
 .dn { display: none; }
+.pos-rel { position: relative; }
 
 .width-25 { width: 25%; }
 .width-50 { width: 50%; }
@@ -143,6 +145,8 @@ a {
 .ofy-hidden {overflow-y: hidden; }
 .of-auto {overflow: auto; }
 
+.brs { border-radius: .25rem; }
+
 /*
  * ===========================================================
  * Colors & Styles
@@ -151,11 +155,39 @@ a {
 .semi-bold { font-weight: 500; }
 .slate { color: rgb(226 232 240); }
 .white { color: #fff; }
+.bg-white { background-color: #fff; }
 
 /*
  * ===========================================================
  * Custom
  */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%
+}
+
+.button {
+    height: 40px;
+    width: 40px;
+}
+.buttonIcon {
+    height: 30px;
+    width: 30px;
+}
+
+.nav--screenM {
+    display: none;
+}
+
+.nav {
+    border: 1px solid #ccc;
+    width: 40%;
+    margin-left: auto;
+    text-align: right;
+}
 
 .transition {
     transition-property: all;
@@ -236,8 +268,47 @@ a {
  * Media Queries
  */
 
+@media screen and (max-width: 1023px) {
+    /* Fade in */
+    .a-underline::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: #0074d9;
+        opacity: 0;
+        transition: opacity 300ms, transform 300ms;
+    }
+
+    .a-underline:hover::after,
+    .a-underline:focus::after {
+        opacity: 1;
+        transform: translate3d(0, 0.2em, 0);
+    }
+
+    .a-underline::after {
+        opacity: 1;
+        transform: scale(0);
+        transform-origin: center;
+    }
+
+    .a-underline:hover::after,
+    .a-underline:focus::after{
+        transform: scale(1);
+    }
+}
+
 @media screen and (min-width: 1024px) {
+    .nav--screenM {
+        display: block;
+        padding-top: 6rem;
+    }
+    .pos-rel--screenM { position: relative; }
+    .navButton, .nav { display: none; }
     .df--screenM { display: flex; }
+    .db--screenM { display: block; }
     .df-column--screenM { flex-direction: column; }
     .df-baseline--screenM { align-items: baseline; }
     .df-alignCenter--screenM { align-items: center; }
@@ -251,6 +322,7 @@ a {
     .phl--screenM { padding-left: 2rem; padding-right: 2rem;}
     .pll--screenM { padding-left: 2rem; }
     .plx--screenM { padding-left: 3rem; }
+    .ptx--screenM { padding-top: 3rem; }
     .ptxx--screenM { padding-top: 6rem; }
     .mt0--screenM { margin-top: 0rem; }
     .mv0--screenM { margin-top: 0rem; margin-bottom: 0rem; }
@@ -261,6 +333,44 @@ a {
     .text-3--screenM { font-size: 1.25rem; }
     .text-4--screenM { font-size: 1rem; }
 
+    .header { 
+        position: fixed;
+        top: 0;
+        width: 20%;
+        min-width: 300px
+    }
+    .main {
+        width: 80%;
+        margin-left: 300px
+    }
+    .a-underline--screenM::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: #0074d9;
+        opacity: 0;
+        transition: opacity 300ms, transform 300ms;
+    }
+
+    .a-underline--screenM:hover::after,
+    .a-underline--screenM:focus::after {
+        opacity: 1;
+        transform: translate3d(0, 0.2em, 0);
+    }
+
+    .a-underline--screenM::after {
+        opacity: 1;
+        transform: scale(0);
+        transform-origin: center;
+    }
+
+    .a-underline--screenM:hover::after,
+    .a-underline--screenM:focus::after{
+        transform: scale(1);
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -281,9 +391,6 @@ a {
         margin-left: 420px;
     }
 
-    .nav {
-        padding-top: 6rem;
-    }
 }
 
 @media screen and (min-width: 1550px) {
